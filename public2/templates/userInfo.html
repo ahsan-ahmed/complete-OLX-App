@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/userInfo.css">
+    <style>
+            #hide1{
+              display: none;
+            }
+            #hide2{
+              display: none;
+            }
+   </style>
+</head>
+<body onload="userAllInfo();userImageShow()">
+    <div class="olx-container">
+        <div class="olx-container-header-top">
+                <div class="olxLogo"><img src="../assets/olx-image.png" alt="olx-logo" style="cursor: pointer" onclick="location.href='../index.html'" ></div>
+                <h5>Pakistan's <br>Largest<br> Marketplace</h5>
+                <div class="account" id="hide1" ><img src="../assets/account-image.jpg" alt="account"> <h4 id="account-h4" onclick="checkUserSignInTemplates()"  
+                    onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'" style="cursor: pointer">My<br>account</h4></div>
+            
+             <div class="olx-account"  id="hide2">
+            <img id="olx-user-account-src" class="img-circle" alt="Cinque Terre" width="50" height="50" style="border-radius: 50px"  > 
+            <p class="olx-user-account-para" style="margin-bottom: 5px" ></p>
+            </div>                        
+                <div class="signoutClass"><input type="button" value="signout" class="signout-button" 
+                    onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" onclick="signout()">
+                </div>
+        </div>
+         <div class="olx-container-header">
+             <div class="header-one"><input type="button" value="Submit An Add" class="add-button-olx" 
+                onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" 
+                onclick="window.open('insertCate.html')"> </div>
+            </div>
+    <div class="olx-container-body">
+        <div class="div0"> 
+            <div class="div1" style="text-align: center"></div>
+            <div class="div2"> 
+                    <div class="div3">
+                    <h3 class="p1" style="font-size: 20px"></h3>
+                    </div>
+                    <div class="div30">
+                        <h3 class="p2" style="font-size: 20px"></h3>
+                    </div>
+                    <div class="div4">
+                        <h3 class="p3" style="font-size: 20px"></h3>
+                    </div>
+                    <div class="div5">
+                        <h3 class="p4" style="font-size: 20px"></h3>
+                    </div>
+                    <div class="div6">
+                        <h3 class="p5" style="font-size: 20px"></h3>
+                    </div>
+                    <div class="div7">
+                        <h3 class="p6" style="font-size: 20px"></h3>
+                    </div>
+            </div>
+        </div>
+        <div class="right-navbar">
+        <div class="right-navbar-head"></div>
+        <div class="right-navbar-body" >
+            <label class="send-notification" style="font-size: 20px">Chat With User</label><br>
+            <textarea class="send-notification-text"  style="resize: none" title="Type your message here..." 
+            rows="8" ></textarea>
+            <p class="send-notification-text-error"></p>
+            <input type="button" value="send" class="send-notification-button" onclick="chatWithUser()">                      
+        </div>
+          <div class="right-navbar-foot"></div>      
+        </div>
+          
+    </div>
+    <div class="olx-container-footer">
+            <div class="footer"></div>
+        </div>
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+<script src="../scripts/app.js"></script>
+</html>

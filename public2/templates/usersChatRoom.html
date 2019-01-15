@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users Chat Room</title>
+    <link rel="stylesheet" href="../styles/usersChatRoom.css">
+
+    <link rel="stylesheet" href="../styles/bootstrap.min.css"> 
+    <script src="../scripts/bootstrap.min.js"></script>
+   
+<!-- <style>
+  #hidden{
+     display: none;
+  }
+</style> -->
+  </head>
+<body onload="getMessages()">
+  <div class="chat-container">
+  <div class="chat-head">
+          <div class="chat-head-head">
+          <img src="../assets/arrow.png" alt="arrow" onclick="location.href='chatHomepage.html'" style="cursor: pointer;"
+            onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">
+          </div>
+          <!-- <div class="chat-head-head-below">
+            <img  class="userChatImage" id="hidden" width="50" height="50" style="border-radius: 50px">
+          </div>
+          <div class="chat-head-body"><p class="chat-head-body-para1"></p></div>
+        <div class="chat-head-foot"></div> -->
+  </div>
+
+  <div class="chat-body"> </div>
+    <div class="last"></div>
+  <div  class="fixed-bottom" >
+    <form onsubmit="return userSendText()">    
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="enter message....">
+      <input type="submit" class="btn btn-outline-primary"  value="send">
+    </div>
+    </form>
+  </div>
+  
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="../scripts/app.js"></script>
+</html>

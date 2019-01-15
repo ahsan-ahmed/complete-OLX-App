@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="../styles/signup.css">
+  
+  
+    </head>
+<body class="body">
+<div class="container">
+    <div class="form-header">
+        <div class="inner-header"></div>
+        <div class="inner-body">
+            <h1>OLX APP</h1></div>
+        <div class="inner-footer"></div>
+    </div>
+     <div class="form-body">
+         <div class="form-heading"><h1>Signup Form</h1></div>
+         <div class="signup-fullname">
+         <label for="fullname">fullname</label><br>
+         <input type="text" class="firstname" placeholder="enter firstname">  
+         <input type="text" class="lastname" placeholder="enter lastname"> 
+        </div>
+        <div class="signup-email">
+            <label for="email">email</label><br>
+            <input type="text" class="email" placeholder="enter email">
+        </div>
+        <div class="signup-password">
+            <label for="pass">password</label><br>
+            <input type="password" class="pass" placeholder="enter password">
+        </div>
+        <div class="signup-picture">
+            <label for="picture:">picture:</label><br>
+            <input type="file" class="imageId" accept="image/x-png,image/gif,image/jpeg" />
+        </div>
+        <div class="signup-button">
+            <center>
+            <input type="button" value="signup" class="signup-button" onclick="signUpInner()">
+        </center>
+        </div>
+        <div class="firebase-div">
+            <center>
+                <h2 class="firebase-res"></h2>
+            </center>
+        </div>
+    </div>
+     <div class="form-footer"></div>
+</div>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+    <script src="../scripts/app.js"></script>
+</html>

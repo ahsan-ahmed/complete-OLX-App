@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ads Information</title>
+    <link rel="stylesheet" href="../styles/olxApp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/chatHomepage.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css"> 
+<style>
+        #hide1{
+          display: none;
+        }
+        #hide2{
+          display: none;
+        }
+</style>
+</head>
+<body onload="loading();;userImageShow(); ">
+    <div class="olx-container">
+        <div class="olx-container-header-top">
+                <div class="olxLogo"><img src="../assets/olx-image.png" alt="olx-logo" style="cursor: pointer" onclick="location.href='../index.html'"  ></div>
+                <h5>Pakistan's <br>Largest<br> Marketplace</h5>
+                <div class="account" id="hide1" ><img src="../assets/account-image.jpg" alt="account"> <h4 id="account-h4" onclick="checkUserSignInTemplates()"  
+                    onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'" style="cursor: pointer">My<br>account</h4></div>
+            
+             <div class="olx-account"  id="hide2">
+            <img id="olx-user-account-src" class="img-circle" alt="Cinque Terre" width="50" height="50" style="border-radius: 50px"  > 
+            <p class="olx-user-account-para" style="margin-bottom: 5px" ></p>
+            </div>                        
+                <div class="signoutClass"><input type="button" value="signout" class="signout-button" 
+                    onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" onclick="signout()">
+                </div>
+        </div>
+         <div class="olx-container-header">
+             <div class="header-one"><input type="button" value="Submit An Add" class="add-button-olx" 
+                onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" 
+                onclick="location.href='insertCate.html'" > </div>
+    
+             <div class="header-five"> 
+                    <input list="browsers" name="browser" class="olx-container-header-search" placeholder="search...." onfocus="this.value=''" onclick="search-category-page">
+                    <datalist id="browsers">
+                    <option value="mobile">
+                    <option value="computer">
+                    <option value="accessories">
+                    <option value="properties">
+                    <option value="laptop">
+                    <option value="bike">    
+                    <option value="car">
+                  </datalist>
+            </div>
+            <div class="header-six">
+                    <button type="submit" class="search-button-olx" onmouseover="this.style.backgroundColor='#ffaa0c'"
+                     onmouseout="this.style.backgroundColor=' #rgb(255, 144, 0)'" onclick="searchCategory()"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        
+        <!-- images receive -->
+      <div class="olx-container-body">
+           <center><div class="loader" ></div>
+            <div class="hide" id="search-image-div" >
+                <img src="../assets/search_folder.png" alt="search category">
+            </div>
+        
+            <div class="olx-container-body-dom-image">
+
+            </div>
+        </center> 
+           
+    </div>
+</div>    
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+<script src="../scripts/app.js"></script>
+</html>

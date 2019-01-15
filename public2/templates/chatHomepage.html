@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat HomePage</title>
+    <link rel="stylesheet" href="../styles/chatHomepage.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css"> 
+    <script src="../scripts/bootstrap.min.js"></script>
+        <style>
+                #hide1{
+                  display: none;
+                }
+                #hide2{
+                  display: none;
+                }
+               </style>
+</head>
+<body onload="showDataUsers()">
+            <div class="olx-container">
+                <div class="olx-container-header-top">
+              <div class="olxLogo"><img src="../assets/olx-image.png" alt="olx-logo" style="cursor: pointer" onclick="location.href='../index.html'"  ></div>
+              <h5><br>Pakistan's <br>Largest<br> Marketplace</h5>
+              <div class="account" id="hide1" ><img src="../assets/account-image.jpg" alt="account"> <h4 id="account-h4" onclick="checkUserSignInTemplates()"  
+                  onmouseover="this.style.color='orange'" onmouseout="this.style.color='black'" style="cursor: pointer"><br><br>My<br>account</h4></div>
+               <div class="olx-account"  id="hide2">
+               <img id="olx-user-account-src" class="img-circle" alt="Cinque Terre" width="50" height="50" style="border-radius: 50px"  > 
+               <p class="olx-user-account-para" style="margin-bottom: 5px" ></p>            
+               </div>      
+           <div class="signoutClass"><input type="button" value="signout" class="signout-button" 
+               onmouseover="this.style.backgroundColor='#ffaa0c'" onmouseout="this.style.backgroundColor='rgb(255, 144, 0)'" onclick="signout()">
+           </div>
+        </div>
+
+      <div class="olx-container-body-top"> 
+          <div class="chatroom-body">
+        </div>
+      
+       </div>
+       
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script>
+<script src="../scripts/app.js"></script>
+</html>
